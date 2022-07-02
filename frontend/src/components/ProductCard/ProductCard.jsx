@@ -6,12 +6,12 @@ import { urlFor } from '../../client'
 
 function ProductCard(props) {
 
-    const {name, rating, img, mrp, discount, prime} = props.data
+    const {_id, name, rating, img, mrp, discount, prime} = props.data
 
     const navigate = useNavigate()
 
     const goTo = () => {
-        // navigate('/product/'+_id)
+        navigate('/product/'+_id)
     }
 
     return (
@@ -20,7 +20,6 @@ function ProductCard(props) {
         <section className='productCard__img'>
 
             <img
-                // src={require(`./images/product_img_${img}.jpg`)}
                 src={urlFor(img[0])}
                 alt='product image'
             />

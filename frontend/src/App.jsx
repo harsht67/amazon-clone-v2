@@ -1,5 +1,5 @@
 import './App.scss'
-import { Footer, Header, Home, ProductPage } from './features'
+import { Footer, Header, Home, ProductPage, Cart } from './features'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -28,6 +28,17 @@ function App() {
               <>
                 <Header/>
                 <ProductPage/>
+                <Footer/>
+              </>
+            }
+          />
+
+          <Route 
+            path='/cart'
+            element={
+              <>  
+                <Header/>
+                <Cart/>
                 <Footer/>
               </>
             }

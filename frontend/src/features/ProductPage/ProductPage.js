@@ -8,13 +8,11 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
-// const images = ['jk', 'jk2']
-
 function ProductPage() {
 
     const {id} = useParams()
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const [qty, setQty] = useState(1)
 
@@ -54,19 +52,16 @@ function ProductPage() {
 
     //add item/product to cart    
     const addToCart = () => {
-        // let p = Math.floor(data.mrp-(data.mrp*data.discount/100))
+        let price = Math.floor(data.mrp-(data.mrp*data.discount/100))
 
-        // dispatch({
-        //     type: 'cart/itemAdded',
-        //     payload: {
-        //         _id: data._id,
-        //         name: data.name,
-        //         img: data.img,
-        //         price: p,
-        //         prime: data.prime,
-        //         qty: parseInt(qty),
-        //     }
-        // })
+        dispatch({
+            type: 'cart/itemAdded',
+            payload: {
+                id: data._id,
+                price,
+                qty: parseInt(qty),
+            }
+        })
 
     }
 

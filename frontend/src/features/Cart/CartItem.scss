@@ -1,0 +1,119 @@
+.CartItem {
+    display: flex;
+    height: 150px;
+    padding-block: 1rem;
+    border-block-end: 1px solid var(--txt3);
+
+    .CartItem__img {
+        width: 15%;
+        object-fit: contain;
+    }
+
+    .CartItem__desc {
+        width: 70%;
+        display: flex;
+        flex-flow: column;
+        gap: 0.25rem;
+
+        .CartItem__name {
+            font-size: var(--fs-500);
+            font-weight: 500;
+        }
+
+        .CartItem__prime {
+            color: #2191c1;
+            font-size: var(--fs-300);
+            font-weight: 700;
+        }
+
+        .CartItem__price {
+            display: none;
+            text-align: left;
+        }
+
+        .CartItem__desc__footer {
+            margin-block-start: auto;
+            display: flex;
+            align-items: center;
+
+            > * {
+                padding-inline: 0.75em;
+            }
+
+            > *:first-child {
+                padding-inline-start: 0;
+            }
+
+            > *:not(:last-child) {
+                border-inline-end: 1px solid var(--txt3);
+            }
+
+        }
+
+        .CartItem__qty {
+            width: 75px;
+
+            input {
+                width: 100%;
+                outline: none;
+            }
+        
+        }
+
+        .CartItem__deleteBtnIcon {
+            color: #5c5c5c;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .CartItem__price {
+        width: 15%;
+        text-align: right;
+        font-size: var(--fs-500);
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .CartItem {
+        gap: 1rem;
+
+        .CartItem__img {
+            min-width: 30%;
+        }
+
+        .CartItem__desc {
+            width: 100%;
+
+            .CartItem__name {
+                font-size: var(--fs-400);
+            }
+
+            .CartItem__price {
+                display: initial;
+            }
+
+        }
+
+        .CartItem__price {
+            display: none;
+        }
+
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    .CartItem {
+
+        .CartItem__img {
+            min-width: 20%;
+        }
+
+    }
+}

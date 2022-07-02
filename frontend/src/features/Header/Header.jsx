@@ -1,6 +1,7 @@
 import './Header.scss'
 import HeaderDropdown from './HeaderDropdown'
 import { images } from '../../constants'
+import { getCartTotalQty } from '../../store/cartSlice'
 
 import { FiShoppingCart } from 'react-icons/fi'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -14,12 +15,9 @@ import { useSelector } from 'react-redux'
 
 function Header() {
   
-    // const cart = Object.values(useSelector(state => state.cart.items))
+    const cart = Object.values(useSelector(state => state.cart.items))
 
     // const user = useSelector(state => state.user)
-
-    // total number of items in cart
-    // const cartTotal = cart.reduce((n, item) => n+item.qty, 0)
   
     return (
         <div className='header'>
@@ -108,8 +106,9 @@ function Header() {
                 <FiShoppingCart className="icon" />
 
                 <span className='header__cartCount'>
-                    {/* {cartTotal} */}
-                    10
+                    
+                    {getCartTotalQty(cart)}
+                    
                 </span>
 
             </Link>
