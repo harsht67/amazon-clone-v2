@@ -11,7 +11,8 @@ export default {
         {
             name: 'img',
             title: 'Img',
-            type: 'image'
+            type: 'array',
+            of: [{type: 'image'}]
         },
         {
             name: 'mrp',

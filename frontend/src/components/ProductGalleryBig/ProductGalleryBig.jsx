@@ -1,6 +1,6 @@
 import './ProductGalleryBig.scss'
 import { urlFor } from '../../client'
-import ProductCard from './ProductCard'
+import ProductCard from '../ProductCard/ProductCard'
 
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 import { useEffect, useState } from 'react'

@@ -1,0 +1,41 @@
+.descBox {
+    font-size: var(--fs-300);
+    display: flex;
+    flex-flow: column;
+    gap: 0.25rem;
+
+    .descBox__content {
+        line-height: 1.5em;
+        padding: 0.25rem 0;
+        list-style-type: none;
+
+        .content__line {
+            margin-block-end: 0.5rem;
+        }
+
+    }
+
+    .hide {
+        max-height: 100px;
+        overflow: hidden;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+    }
+
+    .show {
+        height: min-content;
+    }
+
+    .descBox__btn {
+        font-size: 0.9em;
+        font-weight: 500;
+        color: #007185;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+
+}

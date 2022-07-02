@@ -1,5 +1,5 @@
 import './App.scss'
-import { Footer, Header, Home } from './features'
+import { Footer, Header, Home, ProductPage } from './features'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -17,6 +17,17 @@ function App() {
               <>  
                 <Header/>
                 <Home/>
+                <Footer/>
+              </>
+            }
+          />
+
+          <Route 
+            path='/product/:id'
+            element={
+              <>
+                <Header/>
+                <ProductPage/>
                 <Footer/>
               </>
             }

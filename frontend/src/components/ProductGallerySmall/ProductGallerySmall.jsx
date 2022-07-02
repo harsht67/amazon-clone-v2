@@ -57,8 +57,7 @@ function ProductGallerySmall(props) {
 
                     {data.map(data => (
                         <img
-                            // src={require(`./images/product_img_${data.img}.jpg`)}
-                            src={urlFor(data.img)}
+                            src={urlFor(data.img[0])}
                             alt='product image'
                             onClick={()=>goTo(data._id)}
                         />))

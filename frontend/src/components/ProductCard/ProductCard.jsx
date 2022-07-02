@@ -1,5 +1,5 @@
 import './ProductCard.scss'
-import Rating from './Rating'
+import Rating from '../Rating'
 
 import { useNavigate } from 'react-router-dom'
 import { urlFor } from '../../client'
@@ -21,7 +21,7 @@ function ProductCard(props) {
 
             <img
                 // src={require(`./images/product_img_${img}.jpg`)}
-                src={urlFor(img)}
+                src={urlFor(img[0])}
                 alt='product image'
             />
 
