@@ -1,0 +1,36 @@
+@use 'scss';
+
+:root {
+    --fs-300: 0.9rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+    --txt: #ffffff;
+    --txt2: #ebebeb;
+    --txt3: #d3d3d3;
+    --amazon-orange: #ff9900;
+    --az-orange: #ff9900;
+    --az-orange-t: #ff99001A;
+    --az-yellow : #f2ca68;
+    --az-link: #348e9d;
+    --az-err: #d03535;
+    --az-err-t: #d0353554;
+    --link: #348e9d;
+    --grey: #eaebee;
+    --grey2: #b4b4b4;
+    --grey3: #636363;
+    --br: 5px;
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --fs-300: 0.85rem;
+        --fs-400: 0.9rem;
+        --fs-500: 1.1rem;
+        --fs-700: 1.25rem;
+        --fs-800: 1.5rem;
+        --fs-900: 2rem;
+    }
+}

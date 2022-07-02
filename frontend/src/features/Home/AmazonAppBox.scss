@@ -1,0 +1,27 @@
+.amazonAppBox {
+    padding: 1rem;
+    width: 30%;
+    background-color: #ffffff;
+    z-index: 1;
+    color: #000000;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+
+    .amazonAppBox__title {
+        font-size: var(--fs-700);
+    }
+
+    .amazonAppBox__desc {
+        font-size: var(--fs-300);
+        height: 100%;
+    }
+
+    .amazonAppBox__link {
+        font-size: var(--fs-300);
+        text-decoration: none;
+        color: var(--link);
+        cursor: pointer;
+    }
+
+}

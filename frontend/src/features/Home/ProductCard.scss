@@ -1,0 +1,62 @@
+.productCard {
+
+    .productCard__img {
+        text-align: center;
+        margin-block-end: 0.75rem;
+
+        img {
+            height: 180px;
+            object-fit: contain;
+        }
+            
+    }
+
+    .productCard__desc {
+        font-size: var(--fs-400);
+        display: flex;
+        flex-flow: column;
+        gap: 0.1em;
+    }
+
+    .productCard__name {
+        color: #007185;
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 1.25rem;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+
+        &:hover {
+            color: #ff9900;
+            cursor: pointer;
+        }
+
+    }
+
+    .productCard__rating {
+        color: #ff9900;
+
+        .ratingIcon {
+            font-size: 1.1em;
+        }
+
+    }
+
+    .productCard__price {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    .productCard__mrp {
+        font-size: 0.85em;
+    }
+
+    .productCard__prime {
+        color: #2191c1;
+        font-size: 0.85em;
+        font-weight: 700;
+    }
+
+}

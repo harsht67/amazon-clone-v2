@@ -1,0 +1,121 @@
+.footer {
+    background-color: #232f3e;
+    font-size: var(--fs-400);
+    color: var(--txt);
+
+    .footer__btn {
+        padding: 1rem;
+        font-size: 0.85em;
+        text-align: center;
+        background-color: #37475a;
+        opacity: 0.9;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #415369;
+        }
+
+    }
+
+    .footer__row1 {
+        padding: 1rem;
+        color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+
+        > * {
+            width: 100%;
+        }
+
+        .footer__title {
+            margin-block-end: 0.75em;
+        }
+
+        .footer__items {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0.85em;
+            opacity: 0.9;
+            text-transform: capitalize;
+
+            li {
+                margin-block-end: 0.75em;
+                width: fit-content;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+
+            }
+        
+        }
+
+    }
+
+    hr {
+        border: none;
+        border: 1px solid #39495c;
+    }
+
+    .footer__row2 {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .footer__row3 {
+        padding-block-end: 1rem;
+        opacity: 0.75;
+        font-size: 0.75em;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        > * {
+            width: 100%;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 500px) {
+    .footer {
+
+        .footer__row1 {
+
+            > * {
+                width: 47.5%;
+            }
+        
+        }
+
+        .footer__row3 {
+            gap: 2rem;
+            justify-content: center;
+
+            > * {
+                width: fit-content;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .footer {
+
+        .footer__row1 {
+
+            > * {
+                width: 22.5%;
+            }
+
+        }
+
+    }
+}

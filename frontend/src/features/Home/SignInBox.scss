@@ -1,0 +1,29 @@
+.signInBox {
+    z-index: 1;
+    width: 30%;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    color: #000000;
+
+    .signInBox__title {
+        display: block;
+        font-size: var(--fs-700);
+        font-weight: 500;
+        margin-block-end: 1rem;
+    }
+
+    .signInBox__btn {
+        border: none;
+        border-radius: var(--br);
+        background-color: #ffd753;
+        width: 100%;
+        padding: 0.5em;
+    
+        &:hover {
+            cursor: pointer;
+            filter: brightness(95%);
+        }
+
+    }
+
+}
