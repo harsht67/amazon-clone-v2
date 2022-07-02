@@ -1,0 +1,33 @@
+.signIn {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #cecece;
+    border-radius: var(--br);
+
+    > * {
+        margin-block-end: 0.75rem;
+    }
+
+    .signIn__subTitle {
+        font-size: 0.85em;
+        margin-block: 1rem;
+    }
+
+    .btn--link {
+        color: var(--az-link);
+        margin-inline: 0.25rem;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #f3a847;
+        }
+
+    }
+
+    .signIn__text {
+        font-size: 0.8em;
+        color: var(--grey3);
+        margin-block: 0.5rem;
+    }
+
+}

@@ -1,0 +1,50 @@
+.SignInPage {
+
+    .SignInPage__header {
+        text-align: center;
+    }
+
+    .SignInPage__main {
+        margin-block-end: 2rem;
+    }
+
+    .SignInPage__footer {
+        text-align: center;
+        color: var(--grey3);
+
+        .SignInPage__footer__title {
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            margin-block-end: 0.75rem;
+
+            span {
+                min-width: fit-content;
+                margin-inline: 0.25rem;
+            }
+
+            hr {
+                border-color: var(--grey3);
+                width: 100%;
+            }
+
+        }
+
+        .SignInPage__createBtn {
+            width: 100%;
+            padding: 0.75em;
+            outline: none;
+            background-color: var(--grey);
+            border: 1px solid var(--grey2);
+            border-radius: 2.5px;
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(95%);
+            }
+
+        }
+
+    }
+
+}

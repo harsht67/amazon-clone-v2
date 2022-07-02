@@ -11,13 +11,12 @@ import Poster from './Poster'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { client } from '../../client'
-// import axios from '../../axios.js'
 
 function Home() {
 
   const [data, setData] = useState([])
 
-//   const user = useSelector(state => state.user)
+  const user = useSelector(state => state.user)
 
   // fetch product data
   useEffect(() => {
@@ -28,13 +27,6 @@ function Home() {
     client
         .fetch(query)
         .then(data => setData(data))
-
-    // const fetchData = async () => {
-    //   const req = await axios('/product')
-    //   setData(req.data)
-    // }
-
-    // fetchData()
 
   }, [])
 
@@ -53,10 +45,7 @@ function Home() {
 
             <PrimeVideoBox/>
 
-            {/* { user.isSignedIn ? <AmazonAppBox/> : <SignInBox/> } */}
-
-            { true ? <AmazonAppBox/> : <SignInBox/> }
-            
+            { user.isSignedIn ? <AmazonAppBox/> : <SignInBox/> }            
 
           </section>
 

@@ -1,28 +1,28 @@
 import './HeaderDropdown.scss'
+import { auth } from '../../firebase.js'
 
 import { Link } from 'react-router-dom'
-// import { auth } from '../../firebase.js'
-// import { signOut } from 'firebase/auth'
+import { signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router'
 import { useDispatch } from 'react-redux'
 
 function HeaderDropdown(props) {
 
-    // const naviagte = useNavigate()
+    const naviagte = useNavigate()
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-    // const signOutFunc = () => {
-    //     signOut(auth)
-    //         .then(() => {
-    //             alert('successfully signed out')
-    //             dispatch({
-    //                 type: 'user/userRemoved',
-    //             })
-    //             naviagte('/login')
-    //         })
-    //         .catch(error => alert(error.message))
-    // }
+    const signOutFunc = () => {
+        signOut(auth)
+            .then(() => {
+                // alert('successfully signed out')
+                dispatch({
+                    type: 'user/userRemoved',
+                })
+                naviagte('/login')
+            })
+            .catch(error => alert(error.message))
+    }
 
     return (
         <div className='headerDropdown'>
@@ -42,15 +42,14 @@ function HeaderDropdown(props) {
             <hr/>
 
             <span className='headerDropdown__option'>
-                {/* {props.isSignedIn
+                {props.isSignedIn
                     ? <span onClick={signOutFunc}>
                         sign out
                     </span>
                     : <Link to='/login' >
                         sign in
                     </Link>
-                } */}
-                sign in
+                }
             </span>
 
         </div>

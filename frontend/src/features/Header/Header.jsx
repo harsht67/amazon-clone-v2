@@ -17,7 +17,7 @@ function Header() {
   
     const cart = Object.values(useSelector(state => state.cart.items))
 
-    // const user = useSelector(state => state.user)
+    const user = useSelector(state => state.user)
   
     return (
         <div className='header'>
@@ -68,8 +68,7 @@ function Header() {
             <div className='header__option header__account'>
 
                 <span className='header__optionLineOne'>
-                    hello, 
-                    {/* {user.isSignedIn ? user.data.name : 'Sign in' } */}
+                    hello, {user.isSignedIn ? user.data.name : 'Sign in' }
                 </span>
 
                 <span className='header__optionLineTwo'>
@@ -80,8 +79,9 @@ function Header() {
                 </span>
 
                 <div className='header__dropdown'>
-                    {/* <HeaderDropdown isSignedIn={user.isSignedIn} /> */}
-                    <HeaderDropdown/>
+
+                    <HeaderDropdown isSignedIn={user.isSignedIn} />
+
                 </div>
                 
             </div>

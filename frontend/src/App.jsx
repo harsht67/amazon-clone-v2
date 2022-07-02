@@ -1,5 +1,5 @@
 import './App.scss'
-import { Footer, Header, Home, ProductPage, Cart } from './features'
+import { Footer, Header, Home, ProductPage, Cart, Login } from './features'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -21,6 +21,8 @@ function App() {
               </>
             }
           />
+
+          <Route path='/login' element={<Login/>} />
 
           <Route 
             path='/product/:id'
